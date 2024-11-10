@@ -1,0 +1,211 @@
+/* General reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-logo img {
+    width: 80px; /* Larger logo */
+    height: 80px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Center-aligns nav links */
+}
+
+.nav-links a {
+    color: #092127;
+    margin: 0 15px; /* Increased spacing between links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #0288d1;
+}
+
+.hero-section {
+    position: relative;
+    background: url('images/81aIdGHGiiL._AC_UF1000,1000_QL80_.jpg') center/cover no-repeat;
+    height: 100vh; /* Make it full screen */
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+  
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Black overlay with 40% opacity */
+    z-index: 1;
+}
+  
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensure content appears above the overlay */
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally */
+    height: 100%; /* Fill the full height of the hero section */
+}
+  
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 15px; /* Add some space below the heading */
+}
+  
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 20px; /* Add some space below the paragraph */
+}
+  
+.hero-buttons .btn {
+    text-decoration: none; /* Remove underline */
+}
+  
+.btn.browse-events {
+    background-color: #0288d1;
+    padding: 12px 25px; /* Adjust size */
+    margin-top: 20px; /* Adjust space */
+    font-size: 1.2rem; /* Make text readable */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none; /* Remove underline */
+}
+
+.btn.browse-events:hover {
+    background-color: #0277bd; /* Slightly darker on hover */
+    opacity: 0.9; /* Add hover effect */
+}
+  
+
+/* Page headers */
+.page-header {
+    padding: 20px;
+    text-align: center;
+    background-color: #9fcaf8;
+    color: #0a3d57;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+}
+
+/* Events section styling */
+.events-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.event {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.event:hover {
+    transform: translateY(-5px);
+}
+
+.event img {
+    width: 100%; /* Ensures the image takes the full width of the container */
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Crop the image to fit the container without stretching */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.event h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.event p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn.book-now {
+    background-color: #0288d1;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn.book-now:hover {
+    background-color: #0277bd;
+}
+
+/* Contact form styling */
+.contact-content form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.contact-content label {
+    margin-top: 10px;
+}
+
+.contact-content input,
+.contact-content textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+
+.contact-content button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #0288d1;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-content button:hover {
+    background-color: #0277bd;
+}
